@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang=en data-theme=light><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>🧑‍💻About | 📱App Dev@HarryWork</title><meta name=author content=HarryWork><meta name=copyright content=HarryWork><meta name=format-detection content="telephone=no"><meta name=theme-color content=#ffffff><script src=/js/allpost_data.js></script><meta name=description content="Hi, welcome to Harry Work💻 Harry Work is a small studio specializing in developing mini-games/mini-programs/H5/public accounts/Apps. We are not only “prolific” but also “refined"><meta property=og:type content=website><meta property=og:title content=🧑‍💻About><meta property=og:url content=https://en.app.harrywork.com/about/index.html><meta property=og:site_name content="📱App Dev@HarryWork"><meta property=og:description content="Hi, welcome to Harry Work💻 Harry Work is a small studio specializing in developing mini-games/mini-programs/H5/public accounts/Apps. We are not only “prolific” but also “refined"><meta property=og:locale content=en_US><meta property=og:image content=https://ihogu-1251903635.cos.ap-shanghai.myqcloud.com/site/img/avatar.png><meta property=article:published_time content=2019-01-01T13:12:04.000Z><meta property=article:modified_time content=2025-07-17T08:32:02.904Z><meta property=article:author content=HarryWork><meta name=twitter:card content=summary><meta name=twitter:image content=https://ihogu-1251903635.cos.ap-shanghai.myqcloud.com/site/img/avatar.png><link rel="shortcut icon" href=https://ihogu-1251903635.cos.ap-shanghai.myqcloud.com/site/img/favicon.ico><link rel=canonical href=https://en.app.harrywork.com/about/index.html><link rel=preconnect href=//unpkg.com><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css><link rel=stylesheet href=https://unpkg.com/@fancyapps/ui/dist/fancybox/fancybox.css media=print onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://unpkg.com/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id=config-diff>var GLOBAL_CONFIG_SITE = {
+  title: '🧑‍💻About',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel=stylesheet href=https://app.harrywork.com/my/theme/css/work.css><meta name=generator content="Hexo 7.3.0"><link rel=alternate href=/atom.xml title="📱App Dev@HarryWork" type=application/atom+xml></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel=stylesheet href=https://unpkg.com/pace-js/themes/blue/pace-theme-minimal.css><script src=https://unpkg.com/pace-js/pace.min.js></script><div id=sidebar><div id=menu-mask></div><div id=sidebar-menus><div class="avatar-img text-center"><img src=data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 data-lazy-src=https://ihogu-1251903635.cos.ap-shanghai.myqcloud.com/site/img/avatar.png onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt=avatar></div><div class="site-data text-center"><a href=/archives/ ><div class=headline>Articles</div><div class=length-num>28</div></a><a href=/tags/ ><div class=headline>Tags</div><div class=length-num>15</div></a><a href=/categories/ ><div class=headline>Categories</div><div class=length-num>6</div></a></div><div class=menus_items><div class=menus_item><a href=/ class=site-page><span> 🏠Home</span></a></div><div class=menus_item><a href=/about/ class=site-page><span> 🧑‍💻About</span></a></div><div class=menus_item><a href=/contact/ class=site-page><span> 📬Contact</span></a></div><div class=menus_item><a class=site-page target=_blank rel=noopener href=https://app.harrywork.com><span> 🌏中文</span></a></div></div></div></div><div class="page type-about" id=body-wrap><header class=not-top-img id=page-header><nav id=nav><span id=blog-info><a href=/ class=nav-site-title><span class=site-name>📱App Dev@HarryWork</span></a></span><div id=menus><div id=search-button><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class=menus_items><div class=menus_item><a href=/ class=site-page><span> 🏠Home</span></a></div><div class=menus_item><a href=/about/ class=site-page><span> 🧑‍💻About</span></a></div><div class=menus_item><a href=/contact/ class=site-page><span> 📬Contact</span></a></div><div class=menus_item><a class=site-page target=_blank rel=noopener href=https://app.harrywork.com><span> 🌏中文</span></a></div></div><div id=toggle-menu><span class=site-page><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class=title-seo>🧑‍💻About</h1></header><main class="layout hide-aside" id=content-inner><div id=page><div class=page-title>🧑‍💻About</div><div class=container id=article-container><img src=data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 data-lazy-src=https://ihogu-1251903635.cos.ap-shanghai.myqcloud.com/site/img/site_img/top_img/banner_img.gif style=margin:0;z-index:2; width=30% align=right><p>Hi, welcome to Harry Work💻</p><p>Harry Work is a small studio specializing in developing mini-games&#x2F;mini-programs&#x2F;H5&#x2F;public accounts&#x2F;Apps. We are not only “prolific” but also “refined.” We can talk about “sentiments” and show off our cases.</p><p>Most of our clients are small and medium-sized startups. We tailor-make Apps&#x2F;public accounts&#x2F;mini-programs, etc., according to the actual business of our clients. We continuously update and maintain applications with the business growth of our clients, and we have accumulated a group of long-term loyal customers.</p><p>👉We have no fancy publicity and packaging, only believe that quality and word of mouth are the best publicity</p><p>Whatever application you need, we can provide customized solutions</p><h1 id=📱><a href=#📱 class=headerlink title=📱></a>📱</h1><ul><li>comfyui automation, open-source AI deployment application</li><li>Helping small and medium-sized companies build internal automation systems</li><li>Office automation (Python + Excel + process RPA), etc.</li><li>Technology selection consultant (such as whether to use a low-code platform, whether to use a certain database)</li><li>Android&#x2F;IOS App design and development</li><li>WeChat&#x2F;Alipay&#x2F;TikTok mini-program design and development</li><li>Public account&#x2F;H5 design and development</li><li>Python script&#x2F;assistant development, browser plug-in development&#x2F;grease monkey development</li><li>Around the above related businesses, including but not limited to: domain name registration, server purchase, ICP filing, server deployment&#x2F;optimization, HTTPS deployment, enterprise email, etc.</li></ul><h1 id=🎮><a href=#🎮 class=headerlink title=🎮></a>🎮</h1><ul><li>Godot&#x2F;Cocos&#x2F;Unity</li></ul><p>Thank you for your attention and support</p><!-- [联系我们](../contact) --><!-- ---
+
+- 技术栈
+- 后端:PHP:Phalapi,Laravel,LNMP;Go:Gorm,Gin,Docker/Kubernetes;Java:Spring Boot,MyBatis
+- 前端:Vue/React,SASS/LESS,Ts,Electron,uniapp/Android原生插件
+- 数据库:MongoDB,MySql,PostgreSQL,Redis
+- 中间件:Node.js/Express/Nest; Python/selenium
+- 项目管理:notion/trello/screenmonitor --><hr></div><hr class=custom-hr><div id=post-comment><div class=comment-head><div class=comment-headline><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class=comment-wrap><div><div id=gitalk-container></div></div></div></div></div></main><footer id=footer><div id=footer-wrap><div class=copyright>&copy;2017 - 2025 By HarryWork</div><script src=/js/harry/index_showmore.js></script></div></footer></div><div id=rightside><div id=rightside-config-hide><button id=darkmode type=button title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button></div><div id=rightside-config-show><button id=rightside-config type=button title=Settings><i class="fas fa-cog fa-spin"></i></button><button id=chat-btn type=button title=Chat style=display:none><i class="fas fa-message"></i></button><a id=to_comment href=#post-comment title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id=go-up type=button title="Back to Top"><span class=scroll-percent></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src=https://unpkg.com/hexo-theme-butterfly/source/js/utils.js></script><script src=https://unpkg.com/hexo-theme-butterfly/source/js/main.js></script><script src=https://unpkg.com/@fancyapps/ui/dist/fancybox/fancybox.umd.js></script><script src=https://unpkg.com/vanilla-lazyload/dist/lazyload.iife.min.js></script><div class=js-pjax><script>(() => {
+  const abcjsInit = () => {
+    const abcjsFn = () => setTimeout(() => {
+      document.querySelectorAll(".abc-music-sheet").forEach(ele => {
+        if (ele.children.length > 0) return
+        ABCJS.renderAbc(ele, ele.innerHTML, {responsive: 'resize'})
+      })
+    }, 100)
+    
+    typeof ABCJS === 'object' ? abcjsFn()
+      : btf.getScript('https://unpkg.com/abcjs/dist/abcjs-basic-min.js').then(abcjsFn)
+  }
+
+  window.pjax ? abcjsInit() : window.addEventListener('load', abcjsInit)
+  btf.addGlobalFn('encrypt', abcjsInit, 'abcjs')
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"createIssueManually":true}
+
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  const initGitalk = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGitalk = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const gitalk = new Gitalk({
+      clientID: 'ca1556ac74a78decc45e',
+      clientSecret: '25534893c034bfc2b3d2134eff7ce2de323c1951',
+      repo: 'harry1012_gitalk',
+      owner: 'Harry-1012',
+      admin: ['Harry-1012'],
+      updateCountCallback: commentCount,
+      ...option,
+      id: isShuoshuo ? path : (option && option.id) || '3be7aa98d992907175cbd79c194399f2'
+    })
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async(el, path) => {
+    if (typeof Gitalk === 'function') initGitalk(el, path)
+    else {
+      await btf.getCSS('https://unpkg.com/gitalk/dist/gitalk.css')
+      await btf.getScript('https://unpkg.com/gitalk/dist/gitalk.min.js')
+      initGitalk(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Gitalk' === 'Gitalk'
+      ? window.shuoshuoComment = { loadComment: loadGitalk }
+      : window.loadOtherComment = loadGitalk
+    return
+  }
+
+  if ('Gitalk' === 'Gitalk' || !false) {
+    if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><script src=https://app.harrywork.com/my/theme/js/work.js></script><script src=https://unpkg.com/butterfly-extsrc/dist/activate-power-mode.min.js></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(() => {
+  window.ChatraID = '4REEYKj5Agwn659M7'
+  window.Chatra = window.Chatra || function() {
+    (window.Chatra.q = window.Chatra.q || []).push(arguments)
+  }
+
+  btf.getScript('https://call.chatra.io/chatra.js').then(() => {
+    const isChatBtn = true
+    const isChatHideShow = false
+
+    if (isChatBtn) {
+      const close = () => {
+        Chatra('minimizeWidget')
+        Chatra('hide')
+      }
+
+      const open = () => {
+        Chatra('openChat', true)
+        Chatra('show')
+      }
+
+      window.ChatraSetup = { startHidden: true }
+    
+      window.chatBtnFn = () => document.getElementById('chatra').classList.contains('chatra--expanded') ? close() : open()
+
+      document.getElementById('chat-btn').style.display = 'block'
+    } else if (isChatHideShow) {
+      window.chatBtn = {
+        hide: () => Chatra('hide'),
+        show: () => Chatra('show')
+      }
+    }
+  })
+})()</script><div id=local-search><div class=search-dialog><nav class=search-nav><span class=search-dialog-title>Search</span><span id=loading-status></span><button class=search-close-button><i class="fas fa-times"></i></button></nav><div class=text-center id=loading-database><i class="fas fa-spinner fa-pulse"></i><span> Loading Database</span></div><div class=search-wrap><div id=local-search-input><div class=local-search-box><input class=local-search-box--input placeholder=请输入要搜索的内容 type=text></div></div><hr><div id=local-search-results></div><div id=local-search-stats-wrap></div></div></div><div id=search-mask></div><script src=https://unpkg.com/hexo-theme-butterfly/source/js/search/local-search.js></script></div></div></body></html>
